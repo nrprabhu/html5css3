@@ -1,0 +1,56 @@
+/*<style type="text/css"> */
+/*dot on selector to qualify a class */
+.quote{
+	font-family: kirimomiSwash;
+	font-size: 20px;
+}
+/*Unqualified selector denotes a tag */
+a{
+	background-color: yellow;
+}
+/* selector : action gets style */
+a:hover{
+	text-shadow: 40px;
+	color: red;
+	background-color: white;
+	text-decoration: none;
+}
+
+/*
+p - tag selector , :hover - pseudo seclector , ::first-letter pseudo selector
+will not work if you change the order of pseudo selectors !! see link below
+http://stackoverflow.com/questions/4528583/get-first-letter-of-hover-element-with-css
+the [] is used to select only certain classes for a given tag , in this case the "quote" class. See that the last paragraph does not behave the same!!
+*/
+
+/* selects even quote paragraphs */
+p[class=quote]:nth-of-type(2n)
+{
+	background-color: lavender;
+}
+/* selects odd quote paragraphs */
+p[class=quote]:nth-of-type(2n-1)
+{
+	background-color: #CCC;
+}
+
+p[class=quote]:hover::first-letter
+{
+	line-height: 60px;
+	font-size: 75px;
+	float: left;
+	text-align: top;
+	color: #903;
+	padding-top: 4px; padding-right: 8px; padding-left: 3px;
+	text-transform: uppercase;
+	background-color: yellow;
+	border: 1px solid #333;
+	border-radius: 15px 50px 30px 5px;
+	border-collapse: separate;
+	border-spacing: 10px;
+	/*padding: 15px 5px 5px 5px;*/
+	justify-content: center;
+	/*transform: rotateX(360deg) 2s;  */
+	transition: top 2s ease-in-out;
+}
+/* </style> */

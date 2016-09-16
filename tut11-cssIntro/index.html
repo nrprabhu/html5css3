@@ -1,0 +1,121 @@
+<!doctype html>
+<!-- Intorduction to CSS3 inline styles-->
+<html>
+<head>
+<meta charset="utf8" lang="en">
+<style type="text/css"> 
+/*dot on selector to qualify a class */
+.quote{
+	font-family: kirimomiSwash;
+	font-size: 20px;
+}
+/*Unqualified selector denotes a tag */
+a{
+	background-color: yellow;
+}
+/* selector : action gets style */
+a:hover{
+	text-shadow: 40px;
+	color: red;
+	background-color: white;
+	text-decoration: none;
+}
+
+/* 
+p - tag selector , :hover - pseudo seclector , ::first-letter pseudo selector 
+will not work if you change the order of pseudo selectors !! see link below
+http://stackoverflow.com/questions/4528583/get-first-letter-of-hover-element-with-css  
+the [] is used to select only certain classes for a given tag , in this case the "quote" class. See that the last paragraph does not behave the same!!
+*/
+
+/* selects even quote paragraphs */
+p[class=quote]:nth-of-type(2n)
+{
+	background-color: lavender;
+}
+/* selects odd quote paragraphs */
+p[class=quote]:nth-of-type(2n-1)
+{
+	background-color: #CCC;
+}
+
+p[class=quote]:hover::first-letter
+{
+	line-height: 60px;
+	font-size: 75px;
+	float: left;
+	text-align: top;
+	color: #903;
+	padding-top: 4px; padding-right: 8px; padding-left: 3px;
+	text-transform: uppercase;
+	background-color: yellow;
+	border: 1px solid #333;
+	border-radius: 15px 50px 30px 5px;
+	border-collapse: separate;
+	border-spacing: 10px;
+	/*padding: 15px 5px 5px 5px;*/
+	justify-content: center;
+	/*transform: rotateX(360deg) 2s;  */
+	transition: top 2s ease-in-out;
+}
+</style>
+<title> Quotes to Inspire everyone </title>
+</head>
+
+<body>
+<h2> Quotes Page</h2>
+
+<h3> Henry David Thoreau </h3>
+<p class="quote" style="color: blue">
+Go confidently in the direction of your dreams. Live the life you have imagined.
+Our life is frittered away by detail... simplify, simplify.
+This world is but a canvas to our imagination.
+Things do not change; we change.
+If you have built castles in the air, your work need not be lost; that is where they should be. Now put the foundations under them.
+Rather than love, than money, than fame, give me truth.
+There is no remedy for love but to love more.
+The mass of men lead lives of quiet desperation.
+It's not what you look at that matters, it's what you see.
+As if you could kill time without injuring eternity.</p>
+
+<p class="quote" style="color: green;">
+As a single footstep will not make a path on the earth, so a single thought will not make a pathway in the mind. To make a deep physical path, we walk again and again. To make a deep mental path, we must think over and over the kind of thoughts we wish to dominate our lives.
+Read more at: http://www.brainyquote.com/quotes/authors/h/henry_david_thoreau.html
+
+</p>
+
+<p class="quote">
+Many men go fishing all of their lives without knowing that it is not fish they are after.
+</p>
+
+<br/>
+<br/>
+
+<p class="quote">
+True friendship can afford true knowledge. It does not depend on darkness and ignorance.
+</p>
+
+<br/>
+<hr/>
+
+<p>
+<em>Mouse over on the quotes to have some CSS fun!!! </em>
+</p>
+
+<!--
+<p>
+Read more at: http://www.brainyquote.com/quotes/authors/h/henry_david_thoreau.html
+</p>
+-->
+
+<Div class="credits">
+Read more at: 
+<!-- Color on tag overrides color in script tag within header or external styles-->
+<a style="color: green;" href="http://www.brainyquote.com/quotes/authors/h/henry_david_thoreau.html">Brainy  Quotes </a>
+</Div>
+
+
+</body>
+
+
+</html>

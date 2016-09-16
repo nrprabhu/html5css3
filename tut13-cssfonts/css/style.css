@@ -1,0 +1,21 @@
+#para1
+{
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+#para2
+{
+  font: bold italic 50px serif; /* weight style size family */
+}
+
+.para3
+{
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-family: arial
+}
